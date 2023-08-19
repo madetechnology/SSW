@@ -72,7 +72,7 @@
                 "core/button": {
                     "border": {
                         "color": "green",
-                        "radius": "10px"
+                        "radius": "5px"
                     },
                     "color": {
                         "background":"var(--wp--preset--color--ssw-green)"

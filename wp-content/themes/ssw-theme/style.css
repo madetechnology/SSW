@@ -22,22 +22,21 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 /*----------------Extracted from local website - Hard ----------------*/
 .wp-image-72{
-	border: 5px solid white;
+	border: 5px solid var(--wp--preset--color--ssw-white);
 	border-radius:100px 100px 100px 100px; 
 }
 
 .wp-image-119, .wp-image-68, .wp-image-69{
 	margin-top: -50px;
-
 	border-radius:100px 100px 100px 100px;
-	background-color:pink;
 
 }
-
 
 .menu_custom_item p a{
 	text-decoration: none;
 	font-weight: bold;
+    text-transform:uppercase; 
+    
 }
 
 .menu_custom_item:hover {
@@ -61,8 +60,18 @@ box-shadow: 0 0px 0px 0px gray;
 	transition-delay:0.02s;
 }
 
+/*Overlay button boarders*/
 .wp-block-button__link{
 	border-radius:5px 5px 5px 5px;
+
+}
+.portfolio_button{
+    border-radius:5px 5px 5px 5px;
+    padding: 0px 10px 0px 10px;
+}
+.breadcrumb_buttons{
+    border-radius:5px 5px 5px 5px;
+    padding: 10px 10px 10px 10px;
 }
 
 .overlay:hover{
@@ -70,6 +79,7 @@ box-shadow: 0 0px 0px 0px gray;
   height: 100%;
 }
 
+/* Basic Resposive Menus using Media Queries*/
 .main_menu_mini_custom{
 		display: none; 
 	}
@@ -110,6 +120,22 @@ box-shadow: 0 0px 0px 0px gray;
 	}
 
 }
+
+.breadcrumb-box{
+    padding-top:0px; 
+    padding-bottom:0px; 
+
+    margin:0px; 
+}
+.breadcrumb-header{
+    padding: 25px 50px 25px 50px;
+}
+
+.services_custom{
+    margin-bottom: 50px !important;
+    margin-top: 10px !important; 
+}
+
 
 
 /*----------------Extracted from local website - Hardcoded----------------*/
