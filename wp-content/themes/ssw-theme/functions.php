@@ -38,3 +38,19 @@ function ssw_styles(){
 endif; 
 
 add_action( 'wp_enqueue_scripts', 'ssw_styles');
+
+/*-------------Create Block Pattern ----------------*/
+if( ! function_exists('sub_header_pattern')):
+function sub_header_pattern() {
+    register_block_pattern(
+    'SSW Sub Header Pattern',
+    array(
+    'title'       => __( 'SSW Sub Header Pattern', 'Featured' ),
+    'description' => _x( 'Your Description.', 'Block pattern description', 'Featured' ),
+    'content'     => "<!-- wp:group {\"layout\":{\"type\":\"constrained\"}} -->\n<div class=\"wp-block-group\"><!-- wp:group {\"align\":\"full\",\"backgroundColor\":\"ssw-grey\",\"className\":\"breadcrumb-box\",\"layout\":{\"type\":\"constrained\"}} -->\n<div class=\"wp-block-group alignfull breadcrumb-box has-ssw-grey-background-color has-background\"><!-- wp:group {\"layout\":{\"type\":\"flex\",\"flexWrap\":\"nowrap\",\"justifyContent\":\"space-between\"}} -->\n<div class=\"wp-block-group\"><!-- wp:post-title {\"level\":3,\"style\":{\"layout\":{\"selfStretch\":\"fit\",\"flexSize\":null}},\"backgroundColor\":\"black\",\"textColor\":\"ssw-white\",\"className\":\"breadcrumb-header\",\"fontSize\":\"medium\"} /-->\n\n<!-- wp:columns -->\n<div class=\"wp-block-columns\"><!-- wp:column -->\n<div class=\"wp-block-column\"><!-- wp:group {\"backgroundColor\":\"ssw-green\",\"className\":\"breadcrumb_buttons\",\"layout\":{\"type\":\"flex\",\"flexWrap\":\"nowrap\"},\"fontSize\":\"small\"} -->\n<div class=\"wp-block-group breadcrumb_buttons has-ssw-green-background-color has-background has-small-font-size\"><!-- wp:heading {\"level\":6,\"style\":{\"typography\":{\"fontStyle\":\"normal\",\"fontWeight\":\"400\"}},\"textColor\":\"ssw-white\",\"fontSize\":\"small\"} -->\n<h6 class=\"wp-block-heading has-ssw-white-color has-text-color has-small-font-size\" style=\"font-style:normal;font-weight:400\"><strong>Home</strong> / </h6>\n<!-- /wp:heading -->\n\n<!-- wp:post-title {\"level\":6,\"isLink\":true,\"style\":{\"typography\":{\"fontStyle\":\"normal\",\"fontWeight\":\"400\"}},\"textColor\":\"ssw-white\",\"fontSize\":\"small\"} /--></div>\n<!-- /wp:group --></div>\n<!-- /wp:column --></div>\n<!-- /wp:columns --></div>\n<!-- /wp:group --></div>\n<!-- /wp:group --></div>\n<!-- /wp:group --> ",
+    )
+    );
+    }
+endif; 
+    add_action( 'init', 'sub_header_pattern' );
+    
