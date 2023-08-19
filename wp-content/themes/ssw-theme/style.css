@@ -15,3 +15,101 @@ Text Domain: twentytwenty
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
+
+/* Import Adobe Fonts */
+@import url("https://use.typekit.net/imp2jke.css");
+
+
+/*----------------Extracted from local website - Hard ----------------*/
+.wp-image-72{
+	border: 5px solid white;
+	border-radius:100px 100px 100px 100px; 
+}
+
+.wp-image-119, .wp-image-68, .wp-image-69{
+	margin-top: -50px;
+
+	border-radius:100px 100px 100px 100px;
+	background-color:pink;
+
+}
+
+
+.menu_custom_item p a{
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.menu_custom_item:hover {
+  border-bottom: 1px solid green;	
+}
+
+.menu_custom_item {
+  border-bottom: 1px solid white;	
+}
+
+.button_custom{
+box-shadow: 0 10px 2px -2px gray;
+	border-radius:5px 5px 5px 5px; 
+
+}
+
+.button_custom:hover{
+box-shadow: 0 0px 0px 0px gray;
+	margin-top: 10px;
+	margin-bottom: -10px;
+	transition-delay:0.02s;
+}
+
+.wp-block-button__link{
+	border-radius:5px 5px 5px 5px;
+}
+
+.overlay:hover{
+	width: 100%;
+  height: 100%;
+}
+
+.main_menu_mini_custom{
+		display: none; 
+	}
+
+.main_menu_ham_custom{
+		display: display; 
+}
+.main_menu_ham_custom{
+		display:none; 
+
+	}
+
+@media (max-width: 1000px) {
+.main_menu_custom{
+	display:none; 
+	}	
+	.main_menu_mini_custom{
+		display: block; 
+	}
+}
+
+
+@media (max-width: 800px) {
+.main_menu_custom{
+	display:none; 
+	}	
+	.main_menu_mini_custom{
+		display:none; 
+ 
+	}
+	.main_menu_ham_custom{
+		display:block; 
+	}
+	.custom_stack{
+
+		justify-content: center; 
+
+	}
+
+}
+
+
+/*----------------Extracted from local website - Hardcoded----------------*/
