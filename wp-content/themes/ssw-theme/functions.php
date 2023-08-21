@@ -39,7 +39,7 @@ endif;
 
 add_action( 'wp_enqueue_scripts', 'ssw_styles');
 
-/*-------------Create Block Pattern ----------------*/
+/*-------------Create Block Pattern - Sub Header ----------------*/
 if( ! function_exists('sub_header_pattern')):
 function sub_header_pattern() {
     register_block_pattern(
@@ -53,4 +53,19 @@ function sub_header_pattern() {
     }
 endif; 
     add_action( 'init', 'sub_header_pattern' );
+
+/*-------------Create Block Pattern for Grey Header ----------------*/
+if( ! function_exists('sub_blank_header_pattern')):
+    function sub_blank_header_pattern() {
+        register_block_pattern(
+        'Sub Header Pattern',
+        array(
+        'title'       => __( 'Sub Header Pattern', 'Featured' ),
+        'description' => _x( 'Your Description.', 'Block pattern description', 'Featured' ),
+        'content'     => "<!-- wp:group {\"layout\":{\"type\":\"default\"}} -->\n\n<div class=\"wp-block-group\"><!-- wp:group {\"align\":\"wide\",\"backgroundColor\":\"ssw-grey\",\"layout\":{\"type\":\"constrained\"}} -->\n\n<div class=\"wp-block-group alignwide has-ssw-grey-background-color has-background\"><!-- wp:spacer {\"height\":\"30px\"} -->\n\n<div style=\"height:30px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n\n<!-- /wp:spacer --></div>\n\n<!-- /wp:group --></div>\n\n<!-- /wp:group -->",
+        )
+        );
+        }
+    endif; 
+        add_action( 'init', 'sub_blank_header_pattern' );
     
